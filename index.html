@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Promo Vuelos LATAM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      height: 100vh;
+      background: linear-gradient(135deg, #3f0d7b, #7510f7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+      width: 100%;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .container h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .container p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .button {
+      display: inline-block;
+      background: #ff2d95;
+      padding: 14px 30px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 5px 15px rgba(255, 45, 149, 0.5);
+    }
+
+    .button:hover {
+      background: #e6007e;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="Z7bMNoo.png" alt="Promo Turismo" class="image"/>
+    <h1>¡Vuela con nuestras promociones exclusivas!</h1>
+    <p>Descubre destinos increíbles desde solo <strong>$49.900</strong>. Vive la experiencia.</p>
+    <a href="https://latamviajespromosco.com/travel-web-nacionales-co/" class="button">Reservar ahora</a>
+  </div>
+</body>
+</html>
