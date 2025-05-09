@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Promo Vuelos LATAM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
 
   <style>
     * {
@@ -15,30 +15,63 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      height: 100vh;
+      min-height: 100vh;
       background: linear-gradient(135deg, #3f0d7b, #7510f7);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      text-align: center;
       padding: 20px;
+      overflow: hidden;
+      animation: gradientShift 10s ease infinite alternate;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background: linear-gradient(135deg, #3f0d7b, #7510f7);
+      }
+      100% {
+        background: linear-gradient(135deg, #7510f7, #3f0d7b);
+      }
     }
 
     .container {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.15);
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
       max-width: 500px;
       width: 100%;
-      animation: fadeInUp 1s ease;
+      backdrop-filter: blur(10px);
+      color: white;
+      text-align: center;
+      animation: fadeIn 1.2s ease forwards;
+      transform: translateY(30px);
+      opacity: 0;
     }
 
-    @keyframes fadeInUp {
+    @keyframes fadeIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .container h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    .container p {
+      font-size: 17px;
+      margin-bottom: 25px;
+      animation: slideIn 1.2s ease-in-out;
+    }
+
+    @keyframes slideIn {
       from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
@@ -46,54 +79,54 @@
       }
     }
 
-    .container h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .container p {
-      font-size: 16px;
-      margin-bottom: 25px;
-    }
-
     .image {
       width: 100%;
-      max-width: 300px;
-      margin: 0 auto 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      max-width: 320px;
+      margin: 0 auto 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+      animation: popIn 1.5s ease forwards;
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    @keyframes popIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     .button {
       display: inline-block;
       background: #ff2d95;
-      padding: 14px 30px;
+      padding: 14px 35px;
       color: white;
       font-size: 16px;
       font-weight: bold;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
       transition: background 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 5px 15px rgba(255, 45, 149, 0.5);
+      box-shadow: 0 8px 20px rgba(255, 45, 149, 0.5);
+      animation: fadeIn 2s ease forwards;
     }
 
     .button:hover {
       background: #e6007e;
-      transform: scale(1.05);
+      transform: scale(1.07);
     }
+
   </style>
 </head>
 <body>
 
-  
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17045535190"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-17045535190');
 </script>
 
@@ -101,7 +134,7 @@
     <img src="Z7bMNoo.png" alt="Promo Turismo" class="image"/>
     <h1>¡Vuela con nuestras promociones exclusivas!</h1>
     <p>Descubre destinos increíbles desde solo <strong>$49.900</strong>. Vive la experiencia.</p>
-    <a href="" class="button">Reservar ahora</a>
+    <a href="#" class="button">Reservar ahora</a>
   </div>
 </body>
 </html>
